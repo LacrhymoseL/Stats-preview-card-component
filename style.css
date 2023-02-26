@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+:root {
+    /* Primary */
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);    /*main heading, stats */
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+    /* Font size: 15px */
+    --inter: 'Inter', sans-serif;
+    /* font weight 400,700 */
+    --lexend-deca:: 'Lexend Deca', sans-serif;
+    /* font weight 400 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {background-color: var(--main-background);}
+
+main {
+    max-width: 900px;
+    margin: 9rem auto;
+    background-color: var(--card-background);
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 7px;
+}
+
+.card-left {margin: 3rem 4rem 3rem 3rem;}
+
+    h4 {
+        color: var(--white);
+        font-family: var(--inter);
+        font-weight: 600;
+        font-size: 31px;
+        
+    }
+
+        h4 span {color: var(--Soft-violet);}
+
+    p.main {
+        color: var(--main-paragraph);
+        font-family: var(--inter);
+        font-weight: 400;
+        font-size: 13px;
+        margin-bottom: 3.5rem;
+        margin-top: 1.5rem;
+        line-height: 1.7;
+    }
+
+    .stat-box {
+        display: flex;
+        justify-content: space-between;
+        line-height: 1.7;
+        letter-spacing: 2px;
+    }
+    
+        .stat-box p.numb {
+            color: var(--white);
+            font-family: var(--inter);
+            font-weight: 600;
+            font-size: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-box p.normal {
+            color: var(--stat-headings);
+            font-family: var(--lexend-deca);
+            font-weight: 400;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+
+        .stat-rt {padding-right: 24px;}
+
+/* .card-right */
+
+    .card-right img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0 7px 7px 0;
+    }
+
+    .card-right {position: relative;}
+        
+    .card-right::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color:  hsla(278, 96%, 33%, 0.5);
+        border-radius: 0 7px 7px 0;
+    }
